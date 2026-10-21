@@ -112,7 +112,7 @@ page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿�
 page("calendar.html", "年度行事", "紐約花蓮慈惠堂年度行事。", f'''
 {pagehead("本堂訊息","Temple News","年度行事","Annual Calendar")}
 <section class="gutter"><div class="container">
-  <h2 class="subhead" style="margin-top:0">{L(C.CAL_TITLE, "Major Annual Celebrations")}</h2>
+  <h2 class="subhead" style="margin-top:0">{L("2027（丁未年）" + C.CAL_TITLE, "2027 Major Annual Celebrations")}</h2>
   <div class="tablewrap"><table class="cal">
     <thead><tr><th>{L("農曆","Lunar date")}</th><th>{L("行事","Event")}</th><th>{L("2027年（丁未年）國曆日期","Dates in 2027")}</th></tr></thead>
     <tbody id="calBody"></tbody>

@@ -139,7 +139,7 @@ index_body = f'''
 
 <section class="gutter" style="padding-block:28px;background:var(--red-deep);color:#F6E9D2"><div class="container" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
   {P("點燈、法會可以線上報名，送出後帶繳費單到堂裡繳交現金。", "Register online for lamps and ceremonies, then bring your payment slip to the temple.")}
-  <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="cta" style="background:var(--gold-bright);color:#2A1A08" href="signup.html#lamp">{L("點燈報名","Lamp lighting")}</a><a class="cta ghost" style="color:#F6E9D2;border-color:rgba(246,233,210,.5)" href="signup.html">{L("法會報名","Ceremonies")}</a></div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="cta" style="background:var(--gold-bright);color:#2A1A08" href="https://nytht.vercel.app/#lamp">{L("點燈報名","Lamp lighting")}</a><a class="cta ghost" style="color:#F6E9D2;border-color:rgba(246,233,210,.5)" href="https://nytht.vercel.app/">{L("法會報名","Ceremonies")}</a></div>
 </div></section>
 
 <section class="gutter"><div class="container grid g2" style="align-items:start">
@@ -247,7 +247,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
     <h2 class="sec-title" style="margin:0">{L("線上點燈和法會報名","Lamp & Ceremony Registration")}</h2>
     {P("個人光明燈、太歲燈、五路財神燈、文昌燈，每盞 $120。送出後帶繳費單到堂裡繳交現金。",
        "Guangming, Tai Sui, Five Wealth Gods and Wenchang lamps, $120 each. Bring the payment slip to the temple and pay in cash.", "muted")}
-    <a class="cta big" href="signup.html#lamp">{L("點燈報名","Register for a lamp")}</a>
+    <a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名","Register for a lamp")}</a>
     {P("也可以來電登記：", "You may also register by phone: ", "muted")}<p><span data-tel></span></p>
   </div>
 </div></section>

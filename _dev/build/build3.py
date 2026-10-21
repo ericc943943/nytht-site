@@ -52,8 +52,8 @@ BAND = f'''<section class="band gutter" style="padding-block:0"><div class="cont
   <div>{B("線上點燈和法會報名", "Lamp & Ceremony Registration", "h2")}
     {B("點燈、法會可以線上報名，送出後帶繳費單到堂裡繳交現金。", "Register online, then bring your payment slip to the temple and pay in cash.")}</div>
   <div style="display:flex;flex-wrap:wrap;gap:12px">
-    <a class="cta big" href="signup.html#lamp">{L("點燈報名", "Lamp lighting")}</a>
-    <a class="cta big ghost" href="signup.html">{L("法會報名", "Ceremonies")}</a>
+    <a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Lamp lighting")}</a>
+    <a class="cta big ghost" href="https://nytht.vercel.app/">{L("法會報名", "Ceremonies")}</a>
   </div>
 </div></section>'''
 
@@ -93,8 +93,8 @@ index_body = f'''
     {B("紐約花蓮慈惠堂", "New York Hua Lian Tsu Hui Temple", "h1")}
     {B(HISTORY[0][0], HISTORY[0][1], "p", "lead")}
     <div class="actions">
-      <a class="cta big" href="signup.html#lamp">{L("點燈報名", "Lamp lighting")}</a>
-      <a class="cta big ghost" href="signup.html">{L("法會報名", "Ceremonies")}</a>
+      <a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Lamp lighting")}</a>
+      <a class="cta big ghost" href="https://nytht.vercel.app/">{L("法會報名", "Ceremonies")}</a>
     </div>
     <div class="today" id="today"></div>
   </div>
@@ -113,7 +113,7 @@ index_body = f'''
     </div>
     {B("每盞 $120。凡安奉太歲、點光明燈、文昌光明燈的信眾，本堂於每月農曆初一、十五誦經上疏。", "$120 per lamp. On the 1st and 15th of every lunar month the temple chants scriptures and presents prayers for all lamp holders.", "p", "muted")}
     <div style="display:flex;flex-wrap:wrap;gap:10px">
-      <a class="cta" href="signup.html#lamp">{L("點燈報名", "Register")}</a>
+      <a class="cta" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Register")}</a>
       <a class="cta ghost" href="lamps.html">{L("點燈祈福", "Lamp lighting")}</a>
     </div>
   </div>
@@ -250,7 +250,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
       <li><div class="when">2</div><div class="what">{L("送出後畫面會出現繳費單，請截圖或列印。", "A payment slip appears when you submit. Save a screenshot or print it.")}</div></li>
       <li><div class="when">3</div><div class="what">{L("帶著繳費單到堂裡繳交現金，告知報名編號即可。", "Bring the slip to the temple and pay in cash.")}</div></li>
     </ol>
-    <p style="margin-top:18px"><a class="cta big" href="signup.html#lamp">{L("點燈報名", "Register for a lamp")}</a></p>
+    <p style="margin-top:18px"><a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Register for a lamp")}</a></p>
     <p class="muted" style="margin-top:10px;font-size:.9rem">{L("也可以來電登記：", "You may also register by phone: ")}<span data-tel class="nowrap"></span></p>
   </div>
 </div></section>
@@ -262,7 +262,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
     <div class="card"><h3>{L("祈福消災點燈 - 蓮花福慧燈","Lotus Lamp")}</h3><div class="price">{L("每位 $60","$60 per person")}</div></div>
     <div class="card"><h3>{L("供齋","Food offering")}</h3><div class="price">{L("功德金隨喜","Any amount")}</div>{B("供養十方孤魂。","An offering to wandering souls.","p","muted")}</div>
   </div>
-  <p style="margin-top:18px"><a class="cta" href="signup.html">{L("法會報名","Register for a ceremony")}</a></p>
+  <p style="margin-top:18px"><a class="cta" href="https://nytht.vercel.app/">{L("法會報名","Register for a ceremony")}</a></p>
 </div></section>
 ''')
 

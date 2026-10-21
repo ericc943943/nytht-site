@@ -95,11 +95,11 @@ function header(){
   };
   return `<div class="container gutter">
     <a class="brand" href="index.html" aria-label="${TEMPLE.nameZh}"><img src="assets/logo.jpg" alt="${TEMPLE.nameZh} ${TEMPLE.nameEn}" width="176" height="40"></a>
-    <nav class="nav" id="nav" aria-label="主選單">${NAV.map(item).join("")}<a class="navcta" href="signup.html">${L("線上點燈和法會報名","Lamp & Ceremony Registration")}</a></nav>
+    <nav class="nav" id="nav" aria-label="主選單">${NAV.map(item).join("")}<a class="navcta" href="https://nytht.vercel.app/">${L("線上點燈和法會報名","Lamp & Ceremony Registration")}</a></nav>
     <div class="tools">
       <button class="chipbtn" id="langBtn" type="button" aria-label="切換語言 Switch language">${L("English","繁體中文")}</button>
       <button class="chipbtn" id="sizeBtn" type="button">${L("字放大","A+")}</button>
-      <a class="cta" href="signup.html">${L("線上點燈和法會報名","Lamp & Ceremony Registration")}</a>
+      <a class="cta" href="https://nytht.vercel.app/">${L("線上點燈和法會報名","Lamp & Ceremony Registration")}</a>
       <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="選單 Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div></div>`;

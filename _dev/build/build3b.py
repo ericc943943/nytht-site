@@ -81,7 +81,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
       <li><div class="when">2</div><div class="what">{L("送出後畫面會出現繳費單，請截圖或列印。", "A payment slip appears when you submit. Save a screenshot or print it.")}</div></li>
       <li><div class="when">3</div><div class="what">{L("帶著繳費單到堂裡繳交現金，告知報名編號即可。", "Bring the slip to the temple and pay in cash.")}</div></li>
     </ol>
-    <p style="margin-top:18px"><a class="cta big" href="signup.html#lamp">{L("點燈報名", "Register for a lamp")}</a></p>
+    <p style="margin-top:18px"><a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Register for a lamp")}</a></p>
     <p class="muted" style="margin-top:10px;font-size:.9rem">{L("也可以來電登記：", "You may also register by phone: ")}<span data-tel class="nowrap"></span></p>
   </div>
 </div></section>
@@ -93,7 +93,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
     <div class="card"><h3>{L("祈福消災點燈 - 蓮花福慧燈","Lotus Lamp")}</h3><div class="price">{L("每位 $60","$60 per person")}</div></div>
     <div class="card"><h3>{L("供齋","Food offering")}</h3><div class="price">{L("功德金隨喜","Any amount")}</div>{B("供養十方孤魂。","An offering to wandering souls.","p","muted")}</div>
   </div>
-  <p style="margin-top:18px"><a class="cta" href="signup.html">{L("法會報名","Register for a ceremony")}</a></p>
+  <p style="margin-top:18px"><a class="cta" href="https://nytht.vercel.app/">{L("法會報名","Register for a ceremony")}</a></p>
 </div></section>
 ''')
 

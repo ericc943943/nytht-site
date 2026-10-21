@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>紐約花蓮慈惠堂 – New York Hua Lian Tsu Hui Temple</title>
+<meta name="description" content="紐約花蓮慈惠堂 New York Hua Lian Tsu Hui Temple：奉祀瑤池金母，點燈祈福、法會可線上報名。">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.7.7/lunar.js"></script>
+<script src="assets/site.js"></script>
+</head>
+<body>
+<header class="site-header"></header>
+<main>
+
+<section class="hero gutter"><div class="container fade">
+  <div class="plaque" aria-hidden="true"><span><i>紐</i><i>約</i><i>花</i><i>蓮</i><i>慈</i><i>惠</i><i>堂</i></span></div>
+  <div>
+    <h1><span class="zh">紐約花蓮慈惠堂</span><span class="en">New York Hua Lian Tsu Hui Temple</span></h1>
+    <p class="lead"><span class="zh">紐約花蓮慈惠堂成立於1991年，由何俊忠居士創辦，老堂主何游阿粉女士十幾年的耕耘，再由現任的堂主何春燕接任後，才有今日的莊嚴道場。</span><span class="en">New York Hua Lian Tsu Hui Temple was founded in 1991 by Mr. Ho Chun-Chung. After more than ten years of devoted work by the former head, Mrs. Ho Yu A-Fen, leadership passed to the current head, Ms. Ho Chun-Yen, under whom the temple has become the dignified place of worship it is today.</span></p>
+    <div class="actions">
+      <a class="cta big" href="signup.html#lamp"><span class="zh">點燈報名</span><span class="en">Lamp lighting</span></a>
+      <a class="cta big ghost" href="signup.html"><span class="zh">法會報名</span><span class="en">Ceremonies</span></a>
+    </div>
+    <div class="today" id="today"></div>
+  </div>
+</div></section>
+
+<section class="gutter"><div class="container grid g2" style="align-items:start">
+  <div>
+    <h2 class="sec-title"><span class="zh">年度行事</span><span class="en">Annual Calendar</span></h2>
+    <ul class="upcoming" id="upcoming" data-count="5"></ul>
+    <p style="margin-top:14px"><a href="calendar.html"><span class="zh">年度行事 》》</span><span class="en">Annual calendar 》》</span></a></p>
+  </div>
+  <div class="card" style="gap:14px">
+    <h2 class="sec-title"><span class="zh">點燈祈福</span><span class="en">Lamp Lighting</span></h2>
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
+      <div style="display:flex;gap:8px;align-items:center"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="#58BEEE" opacity=".9"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="#58BEEE"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="#58BEEE" opacity=".7"/></svg><b><span class="zh">個人光明燈</span><span class="en">Guangming</span></b></div><div style="display:flex;gap:8px;align-items:center"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="#356D82" opacity=".9"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="#356D82"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="#356D82" opacity=".7"/></svg><b><span class="zh">太歲燈</span><span class="en">Tai Sui</span></b></div><div style="display:flex;gap:8px;align-items:center"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="#89A9BE" opacity=".9"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="#89A9BE"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="#89A9BE" opacity=".7"/></svg><b><span class="zh">五路財神燈</span><span class="en">Five Wealth Gods</span></b></div><div style="display:flex;gap:8px;align-items:center"><svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="#4698BE" opacity=".9"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="#4698BE"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="#4698BE" opacity=".7"/></svg><b><span class="zh">文昌燈</span><span class="en">Wenchang</span></b></div>
+    </div>
+    <p class="muted"><span class="zh">每盞 $120。凡安奉太歲、點光明燈、文昌光明燈的信眾，本堂於每月農曆初一、十五誦經上疏。</span><span class="en">$120 per lamp. On the 1st and 15th of every lunar month the temple chants scriptures and presents prayers for all lamp holders.</span></p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <a class="cta" href="signup.html#lamp"><span class="zh">點燈報名</span><span class="en">Register</span></a>
+      <a class="cta ghost" href="lamps.html"><span class="zh">點燈祈福</span><span class="en">Lamp lighting</span></a>
+    </div>
+  </div>
+</div></section>
+
+<hr class="divider">
+
+<section class="gutter"><div class="container grid g2" style="align-items:center">
+  <figure class="ph " data-label="堂主簡介"><img src="images/master.jpg" alt="堂主簡介 Head of the Temple" loading="lazy"></figure>
+  <div>
+    <h2 class="sec-title"><span class="zh">堂主簡介</span><span class="en">Head of the Temple</span></h2>
+    <div class="prose"><p><span class="zh">紐約花蓮慈惠堂堂主何春燕女士，出生於台灣宜蘭縣羅東鎮上，小康家庭，父親是畫家，母親是虔誠的媽祖信徒，自幼就身受父母親的教誨，立身處事講究篤信，堅實。</span><span class="en">Ms. Ho Chun-Yen was born in Luodong, Yilan County, Taiwan. Her father was a painter and her mother a devout follower of Mazu, and she was raised to value sincerity and steadiness.</span></p></div>
+    <p style="margin-top:14px"><a href="master.html"><span class="zh">閱讀更多 》》</span><span class="en">Read more 》》</span></a></p>
+  </div>
+</div></section>
+
+<section class="gutter" style="background:var(--paper-2)"><div class="container">
+  <h2 class="sec-title"><span class="zh">本堂設施</span><span class="en">Facilities</span></h2>
+  <div class="grid g3">
+    <a class="card" href="halls.html#main" style="text-decoration:none;color:inherit"><h3><span class="zh">大殿</span><span class="en">Main Hall</span></h3><p class="muted"><span class="zh">本堂大殿間隔三才，中為無極聖殿，奉祀主神　無極瑤池大聖西王金母大天尊，飽滿豐實，眉慈目秀，神韻儼然，相貌慈祥，全身瀝粉貼金，在燈光映燦下，烘托出無窮的神感寶光，金母高居俯下，猶如一輪明月普照萬物生靈，時刻關心來此朝拜善信的吉凶命運，庇佑信眾平安，廣度有緣；右祀奉祀，玄穹高上帝玉皇赦罪賜福大天尊；左邊奉祀，無上虛空地母無量慈尊大慈尊。</span><span class="en">At the center the principal deity, the Golden Mother of the Jasper Pool, is enshrined; to the right is the Jade Emperor and to the left the Earth Mother. Before the altar are Guanyin, Guan Di, Mazu, Marshal Zhongtan and the Earth God, among others.</span></p><span class="more" style="color:var(--red)"><span class="zh">閱讀更多</span><span class="en">More</span></span></a><a class="card" href="halls.html#wenchang" style="text-decoration:none;color:inherit"><h3><span class="zh">文昌帝君殿</span><span class="en">Hall of Wenchang</span></h3><p class="muted"><span class="zh">文昌帝君殿供奉文昌帝君、魁斗星君與大成至聖先師；</span><span class="en">Dedicated to Wenchang Dijun, Kuidou Xingjun and Confucius, with the attendants Tianlong and Diya.</span></p><span class="more" style="color:var(--red)"><span class="zh">閱讀更多</span><span class="en">More</span></span></a><a class="card" href="halls.html#caishen" style="text-decoration:none;color:inherit"><h3><span class="zh">五路財神殿</span><span class="en">Hall of the Five Wealth Gods</span></h3><p class="muted"><span class="zh">五路財神殿供奉天官大帝、文財神范蠡、武財神趙功明、南山通利仙官石崇、北府納庫仙官沈萬山，以及招財和進寶等二位童子。</span><span class="en">Dedicated to the Heavenly Official and the gods of wealth Fan Li, Zhao Gongming, Shi Chong and Shen Wanshan, with the attendants Zhaocai and Jinbao.</span></p><span class="more" style="color:var(--red)"><span class="zh">閱讀更多</span><span class="en">More</span></span></a><a class="card" href="halls.html#taisui" style="text-decoration:none;color:inherit"><h3><span class="zh">太歲殿</span><span class="en">Tai Sui Hall</span></h3><p class="muted"><span class="zh">太歲殿供奉斗姆元君、六十甲子太歲星君。是美東唯一獨有的太歲殿。</span><span class="en">Home of Doumu Yuanjun and the sixty Tai Sui generals — the only Tai Sui hall on the US East Coast.</span></p><span class="more" style="color:var(--red)"><span class="zh">閱讀更多</span><span class="en">More</span></span></a><a class="card" href="halls.html#sanqing" style="text-decoration:none;color:inherit"><h3><span class="zh">三清殿</span><span class="en">Hall of the Three Pure Ones</span></h3><p class="muted"><span class="zh">三清殿供奉三清道祖。</span><span class="en">Dedicated to the Three Pure Ones: Yuanshi Tianzun, Lingbao Tianzun and Daode Tianzun.</span></p><span class="more" style="color:var(--red)"><span class="zh">閱讀更多</span><span class="en">More</span></span></a>
+  </div>
+</div></section>
+
+<section class="band gutter" style="padding-block:0"><div class="container">
+  <div><h2><span class="zh">線上點燈和法會報名</span><span class="en">Lamp & Ceremony Registration</span></h2>
+    <p><span class="zh">點燈、法會可以線上報名，送出後帶繳費單到堂裡繳交現金。</span><span class="en">Register online, then bring your payment slip to the temple and pay in cash.</span></p></div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px">
+    <a class="cta big" href="signup.html#lamp"><span class="zh">點燈報名</span><span class="en">Lamp lighting</span></a>
+    <a class="cta big ghost" href="signup.html"><span class="zh">法會報名</span><span class="en">Ceremonies</span></a>
+  </div>
+</div></section>
+
+<section class="gutter"><div class="container grid g2">
+  <div>
+    <h2 class="sec-title"><span class="zh">聯繫本堂</span><span class="en">Contact Us</span></h2>
+    <dl class="contact-list">
+      <div><dt><span class="zh">地址</span><span class="en">Address</span></dt><dd data-address></dd></div>
+      <div><dt><span class="zh">電話</span><span class="en">Tel</span></dt><dd data-tel></dd></div>
+      <div><dt><span class="zh">傳真</span><span class="en">Fax</span></dt><dd data-fax></dd></div>
+      <div><dt>Email</dt><dd data-email></dd></div>
+    </dl>
+    <p style="margin-top:16px"><a href="contact.html"><span class="zh">聯繫本堂 》》</span><span class="en">Contact us 》》</span></a></p>
+  </div>
+  <figure class="ph " data-label="活動剪影"><img src="images/gallery-1.jpg" alt="活動剪影 Gallery" loading="lazy"></figure>
+</div></section>
+
+</main>
+<footer class="site-footer"></footer>
+</body>
+</html>

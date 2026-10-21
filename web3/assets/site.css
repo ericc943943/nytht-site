@@ -1,0 +1,256 @@
+/* 紐約花蓮慈惠堂 網站共用樣式
+   版面：窄欄閱讀＋寬版區塊；首頁以直書匾額為視覺主軸；紅漆、金、宣紙三色 */
+:root{
+  --paper:#F7FAFB; --paper-2:#EDF4F7; --surface:#FFFFFF; --ink:#272A2D; --muted:#5E696E;
+  --line:#D7E3E9; --red:#356D82; --red-deep:#2B5A6B; --red-ink:#FFFFFF; --red-soft:#E3EFF4;
+  --gold:#2F7FA8; --gold-bright:#58BEEE; --gold-soft:#E8F4FA;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --fs:18px; --maxw:1120px; --read:42rem; color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0F171B; --paper-2:#152027; --surface:#1A262D; --ink:#E8EEF1; --muted:#A5B3BA;
+  --line:#2B3A42; --red:#7CC4E8; --red-deep:#1E4452; --red-ink:#0B1A20; --red-soft:#17323D;
+  --gold:#7CC4E8; --gold-bright:#58BEEE; --gold-soft:#16303B; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#0F171B; --paper-2:#152027; --surface:#1A262D; --ink:#E8EEF1; --muted:#A5B3BA;
+  --line:#2B3A42; --red:#7CC4E8; --red-deep:#1E4452; --red-ink:#0B1A20; --red-soft:#17323D;
+  --gold:#7CC4E8; --gold-bright:#58BEEE; --gold-soft:#16303B; color-scheme:dark }
+:root.big{ --fs:21px }
+
+*{box-sizing:border-box}
+html{font-size:var(--fs);-webkit-text-size-adjust:100%;scroll-padding-top:5rem}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75}
+img{max-width:100%;display:block}
+a{color:var(--red)}
+h1,h2,h3{font-family:var(--serif);line-height:1.35;margin:0;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+[hidden]{display:none!important}
+
+/* 中英切換：html[lang] 決定顯示哪一種 */
+html[lang="en"] .zh{display:none!important}
+html:not([lang="en"]) .en{display:none!important}
+
+.gutter{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.container{max-width:var(--maxw);margin:0 auto}
+.reading{max-width:var(--read)}
+
+/* ---------- 頁首 ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.site-header .container{display:flex;align-items:center;gap:16px;min-height:4.2rem}
+.brand{display:flex;align-items:center;flex:none;background:#fff;border-radius:8px;padding:3px 6px}
+.brand img{height:40px;width:auto}
+.nav{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nav a{color:var(--ink);text-decoration:none;padding:8px 10px;border-radius:8px;font-size:.92rem;white-space:nowrap}
+.nav a:hover{background:var(--paper-2)}
+.nav a[aria-current="page"]{color:var(--red);font-weight:700}
+.tools{display:flex;align-items:center;gap:6px;flex:none}
+.chipbtn{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer;font:inherit;font-size:.82rem;white-space:nowrap}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:var(--red-ink);text-decoration:none;font-weight:700;border-radius:10px;padding:0 18px;min-height:2.6rem;white-space:nowrap}
+.cta.big{min-height:3.2rem;padding:0 26px;font-size:1.05rem;border-radius:12px}
+.cta.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.menubtn{display:none;border:none;background:none;cursor:pointer;padding:8px;color:var(--ink)}
+.menubtn svg{width:28px;height:28px}
+@media (max-width:1020px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--surface);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px));gap:0}
+  .nav.open{display:flex}
+  .nav a{padding:12px 8px;font-size:1.05rem;border-bottom:1px solid var(--line);border-radius:0}
+  .menubtn{display:block;margin-left:auto}
+  .tools .cta{display:none}
+}
+@media (max-width:420px){ .brand img{height:32px} .chipbtn{padding:4px 9px} }
+
+/* ---------- 頁面標題帶 ---------- */
+.pagehead{background:var(--paper-2);border-bottom:1px solid var(--line);padding-block:44px 36px}
+.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.2em;font-size:.82rem;text-transform:uppercase}
+.pagehead h1{font-size:clamp(1.8rem,4.5vw,2.6rem);margin-top:6px}
+.pagehead p{color:var(--muted);margin-top:10px;max-width:var(--read)}
+
+main section{padding-block:48px}
+.sec-title{font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:18px}
+.sec-title small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--gold);letter-spacing:.2em;font-weight:700;margin-bottom:4px}
+.prose p + p{margin-top:1em}
+.prose{font-size:1.02rem}
+.muted{color:var(--muted)}
+.divider{border:none;border-top:1px solid var(--line);margin:0}
+
+/* ---------- 首頁 Hero：直書匾額 ---------- */
+.hero{background:
+   radial-gradient(1200px 400px at 85% -10%, var(--gold-soft), transparent 70%),
+   var(--paper);padding-block:48px 56px}
+.hero .container{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,64px);align-items:center}
+.plaque{background:var(--red-deep);color:var(--gold-bright);border-radius:6px;padding:18px 14px;box-shadow:inset 0 0 0 3px var(--red-deep),inset 0 0 0 5px var(--gold-bright),0 10px 30px -12px rgba(0,0,0,.45)}
+.plaque span{display:flex;flex-direction:column;align-items:center;gap:.22em;font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,5vw,2.8rem);line-height:1}
+.plaque span i{font-style:normal;display:block}
+.hero h1{font-size:clamp(1.5rem,4vw,2.4rem);color:var(--red)}
+.hero .lead{font-size:1.08rem;color:var(--muted);margin-top:12px;max-width:34rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.today{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:22px;font-size:.92rem;color:var(--muted)}
+.today b{color:var(--ink);font-weight:700}
+@media (max-width:640px){
+  .hero .container{grid-template-columns:1fr;justify-items:start}
+  .plaque{padding:12px 16px}
+  .plaque span{flex-direction:row;font-size:1.5rem;gap:.12em}
+}
+
+/* ---------- 卡片 / 格線 ---------- */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{font-size:1.2rem}
+.card .price{color:var(--gold);font-weight:700}
+.card .more{margin-top:auto;font-weight:700;text-decoration:none}
+.card .more::after{content:" →"}
+
+/* 下一個行事 */
+.upcoming{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.upcoming li{display:grid;grid-template-columns:8rem 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line);align-items:baseline}
+.upcoming .when{font-family:var(--serif);font-weight:700;color:var(--red);line-height:1.3}
+.upcoming .when small{display:block;font-family:var(--sans);font-weight:400;color:var(--muted);font-size:.8rem}
+.upcoming .what b{display:block;font-size:1.05rem}
+.upcoming .what span{color:var(--muted);font-size:.9rem}
+
+/* ---------- 圖片框：沒有照片時顯示設計過的底 ---------- */
+.ph{margin:0;border-radius:12px;overflow:hidden;background:var(--paper-2);position:relative;aspect-ratio:4/3;max-width:100%}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.noimg{background:
+   repeating-linear-gradient(135deg, transparent 0 14px, color-mix(in srgb, var(--gold) 10%, transparent) 14px 15px),
+   var(--gold-soft);display:grid;place-items:center}
+.ph.noimg img{display:none}
+.ph.noimg::after{content:attr(data-label);font-family:var(--serif);font-weight:700;color:var(--gold);font-size:1.3rem;letter-spacing:.2em;text-align:center;padding:12px}
+.ph.tall{aspect-ratio:3/4}
+
+/* ---------- 殿堂 ---------- */
+.hall{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px;align-items:center;padding-block:28px;border-top:1px solid var(--line)}
+.hall:first-child{border-top:none}
+.hall h2{font-size:1.5rem;color:var(--red)}
+.hall .deities{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:0;list-style:none}
+.hall .deities li{background:var(--gold-soft);border-radius:999px;padding:3px 12px;font-size:.9rem}
+@media (max-width:720px){ .hall{grid-template-columns:1fr} }
+
+/* ---------- 年度行事表 ---------- */
+.cal{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.cal th,.cal td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.cal th{font-size:.82rem;color:var(--muted);font-weight:500;letter-spacing:.08em}
+.cal td.lunar{font-family:var(--serif);font-weight:700;color:var(--red);white-space:nowrap}
+.cal td.solar{white-space:nowrap;color:var(--muted);font-size:.92rem}
+.cal tr.key td{background:var(--red-soft)}
+.cal .ev b{display:block}
+.cal .ev span{color:var(--muted);font-size:.9rem}
+.tablewrap{overflow-x:auto}
+@media (max-width:620px){
+  .cal thead{display:none}
+  .cal tr{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;padding:12px 4px;border-bottom:1px solid var(--line)}
+  .cal td{border:none;padding:0}
+  .cal td.lunar{grid-row:span 2}
+}
+
+/* ---------- 燈 ---------- */
+.lamp{border-top:4px solid var(--gold)}
+.icon{width:44px;height:44px;flex:none}
+.facts{display:grid;gap:12px;padding:0;margin:0;list-style:none}
+.facts li{display:flex;gap:12px;align-items:flex-start}
+.facts li::before{content:"";flex:none;width:.6rem;height:.6rem;margin-top:.6rem;border-radius:50%;background:var(--gold)}
+
+/* ---------- 報名帶 ---------- */
+.band{background:var(--red-deep);color:#F6E9D2}
+.band .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-block:36px}
+.band h2{color:var(--gold-bright);font-size:clamp(1.3rem,3vw,1.7rem)}
+.band p{opacity:.9;margin-top:6px}
+.band .cta{background:var(--gold-bright);color:#2A1A08}
+.band .cta.ghost{background:transparent;color:#F6E9D2;border-color:color-mix(in srgb, #F6E9D2 50%, transparent)}
+
+/* ---------- 聯繫 ---------- */
+.contact-list{display:grid;gap:16px;margin:0}
+.contact-list div{display:grid;grid-template-columns:6rem 1fr;gap:12px}
+.contact-list dt{color:var(--muted);font-size:.9rem}
+.contact-list dd{margin:0;font-weight:500;word-break:break-word}
+.mapframe{width:100%;aspect-ratio:4/3;border:0;border-radius:12px;background:var(--paper-2)}
+
+/* ---------- 頁尾 ---------- */
+.site-footer{background:var(--paper-2);border-top:1px solid var(--line);padding-block:40px 32px;margin-top:24px;font-size:.92rem}
+.site-footer .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:24px}
+.site-footer h4{font-family:var(--serif);font-size:1rem;margin:0 0 8px}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.site-footer a{color:var(--ink);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .copy{grid-column:1/-1;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:16px}
+.nowrap{white-space:nowrap}
+
+.notice{background:var(--gold-soft);border-radius:12px;padding:14px 18px;font-size:.95rem}
+@media (prefers-reduced-motion:no-preference){ .fade{animation:fade .5s ease both} @keyframes fade{from{opacity:.6;transform:translateY(8px)}to{opacity:1;transform:none}} }
+
+/* ---------- 下拉選單（照舊網站的子選單） ---------- */
+.dd{position:relative}
+.ddbtn{display:flex;align-items:center;gap:4px;border:none;background:none;color:var(--ink);font:inherit;font-size:.92rem;padding:8px 10px;border-radius:8px;cursor:pointer;white-space:nowrap}
+.ddbtn:hover{background:var(--paper-2)}
+.ddbtn svg{width:12px;height:12px}
+.dd.on > .ddbtn{color:var(--red);font-weight:700}
+.ddmenu{display:none;position:absolute;top:100%;left:0;min-width:13rem;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;box-shadow:0 10px 24px -12px rgba(0,0,0,.3);z-index:25}
+.dd.open .ddmenu{display:grid}
+@media (hover:hover) and (min-width:1021px){ .dd:hover .ddmenu{display:grid} }
+.ddmenu a{display:block}
+@media (max-width:1020px){
+  .dd{border-bottom:1px solid var(--line)}
+  .ddbtn{width:100%;padding:12px 8px;font-size:1.05rem;border-radius:0}
+  .ddmenu{display:grid;position:static;box-shadow:none;border:none;padding:0 0 6px 16px;min-width:0;background:none}
+  .ddmenu a{border-bottom:none!important;padding:8px!important;font-size:1rem!important;color:var(--muted)!important}
+  .ddbtn svg{display:none}
+}
+
+/* ---------- 首頁橫幅照片 ---------- */
+.banner{padding-block:0}
+.banner .ph{aspect-ratio:21/8;border-radius:0}
+@media (max-width:640px){ .banner .ph{aspect-ratio:4/3} }
+
+/* ---------- 文章列表 ---------- */
+.postlist{list-style:none;margin:0;padding:0}
+.postlist li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--line);align-items:baseline;flex-wrap:wrap}
+.postlist li:last-child{border-bottom:1px solid var(--line)}
+.postlist b{font-weight:500;font-size:1.05rem}
+.postlist time{color:var(--muted);font-size:.88rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.postlist a{color:inherit;text-decoration:none}
+.postlist a:hover b{color:var(--red)}
+.readmore{display:inline-block;margin-top:14px;font-weight:700;text-decoration:none}
+
+/* 原文待補提示：預覽用，上線前移除 */
+.draftnote{border:2px dashed var(--gold);background:var(--gold-soft);border-radius:10px;padding:10px 14px;font-size:.88rem;margin-bottom:22px}
+.subhead{font-size:1.25rem;color:var(--red);margin:28px 0 10px}
+.cal2{width:100%;border-collapse:collapse}
+.cal2 td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.cal2 td:first-child{font-family:var(--serif);font-weight:700;color:var(--red);white-space:nowrap;width:12em}
+@media (max-width:560px){ .cal2 td{display:block;padding:2px 4px} .cal2 tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)} .cal2 td{border:none;width:auto} }
+.navcta{display:none!important}
+@media (max-width:1020px){ .nav a.navcta{display:block!important;margin-top:12px;text-align:center;background:var(--red);color:var(--red-ink);border-radius:10px;border-bottom:none;font-weight:700} }
+@media (min-width:1021px) and (max-width:1420px){ .nav a,.ddbtn{padding:8px 6px;font-size:.86rem} .chipbtn{padding:5px 9px} .tools .cta{padding:0 12px;font-size:.88rem} }
+
+/* 頁尾：舊網站的藍色 */
+.site-footer{background:#356D82;color:#EAF4F8;border-top:6px solid #58BEEE}
+.site-footer h4{color:#FFFFFF}
+.site-footer a{color:#FFFFFF}
+.site-footer .copy{color:#CFE3EC;border-top-color:rgba(255,255,255,.25)}
+.sec-title{padding-bottom:10px;border-bottom:2px solid #89A9BE}
+.upcoming.nums li{grid-template-columns:2.2rem 1fr}
+.upcoming.years li{grid-template-columns:4.5rem 1fr}
+.taisui{border-collapse:collapse;width:100%;font-size:.92rem;margin:6px 0 14px}
+.taisui td{padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.baogao{font-family:var(--serif);line-height:2.1;letter-spacing:.05em;background:var(--gold-soft);border-radius:10px;padding:16px 20px}
+.prose .zh p + p,.prose .en p + p{margin-top:1em}
+
+/* 文繞圖：照片照原尺寸放在一側，文字繞著排（照舊網站） */
+.wraptext::after{content:"";display:block;clear:both}
+.wrapimg{margin:4px 0 14px;max-width:46%}
+.wrapimg.left{float:left;margin-right:24px}
+.wrapimg.right{float:right;margin-left:24px}
+.wrapimg img{width:100%;height:auto;border-radius:8px;display:block}
+.hall.wraptext{display:block}
+.hall.wraptext > div{overflow:visible}
+@media (max-width:560px){
+  .wrapimg{max-width:42%!important;margin-bottom:10px}
+  .wrapimg.left{margin-right:14px}
+  .wrapimg.right{margin-left:14px}
+}
+.prose.wraptext{max-width:58rem}

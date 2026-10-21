@@ -98,10 +98,10 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
 ''')
 
 # ---------------------------------------------------------------- 本堂設施
-page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、五路財神殿、太歲殿、三清殿。", f'''
+page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、月老神君、五路財神殿、太歲殿、三清殿。", f'''
 {pagehead("","","本堂設施","Facilities")}
 <section class="gutter"><div class="container">
-  {"".join(f"""<article class="hall wraptext" id="{k}"><h2 style="margin-bottom:12px">{L(zh,en)}</h2>{wrapimg(img, zh+" "+en, "left", 400)}
+  {"".join(f"""<article class="hall wraptext" id="{k}"><h2 style="margin-bottom:12px">{L(zh,en)}</h2>{wrapimg(img, zh+" "+en, "left", 400) if os.path.exists(os.path.join(HERE, "web3", "images", img)) else ""}
     <div><div class="prose">{zh_en("<p>"+br(C.HALLS_TEXT[k])+"</p>", "<p>"+de+"</p>")}</div>
       <ul class="deities">{"".join(f"<li>{L(a,b)}</li>" for a,b in HALL_DEITIES[k])}</ul></div></article>""" for k,(zh,en,img,dz,de) in zip(HALL_KEYS, HALLS))}
 </div></section>

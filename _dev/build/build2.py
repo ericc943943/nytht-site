@@ -110,15 +110,18 @@ HALLS = [
  ("文昌帝君殿", "Hall of Wenchang", "hall-wenchang.jpg",
   "奉祀文昌帝君、魁斗星君與大成至聖先師，另配祀天聾、地啞二聖。",
   "Dedicated to Wenchang Dijun, Kuidou Xingjun and Confucius, with the attendants Tianlong and Diya."),
+ ("月老神君", "Yue Lao", "hall-yuelao.jpg",
+  "月老神君供奉於文昌殿前方，主掌人間姻緣。",
+  "Yue Lao, the Old Man under the Moon, is enshrined in front of the Wenchang altar and watches over love and marriage."),
  ("五路財神殿", "Hall of the Five Wealth Gods", "hall-caishen.jpg",
   "奉祀天官大帝、文財神范蠡、武財神趙公明、南山通利仙官石崇、北府納庫仙官沈萬山，另有招財、進寶二位童子。",
   "Dedicated to the Heavenly Official and the gods of wealth Fan Li, Zhao Gongming, Shi Chong and Shen Wanshan, with the attendants Zhaocai and Jinbao."),
  ("太歲殿", "Tai Sui Hall", "hall-taisui.jpg",
-  "奉祀斗姆元君與六十甲子太歲星君，為美東唯一的太歲殿。",
-  "Home of Doumu Yuanjun and the sixty Tai Sui generals — the only Tai Sui hall on the US East Coast."),
+  "位於二樓，奉祀斗姆元君與六十甲子太歲星君，為美東唯一的太歲殿。",
+  "On the second floor, home of Doumu Yuanjun and the sixty Tai Sui generals — the only Tai Sui hall on the US East Coast."),
  ("三清殿", "Hall of the Three Pure Ones", "hall-sanqing.jpg",
-  "奉祀三清道祖：元始天尊、靈寶天尊、太上道祖。",
-  "Dedicated to the Three Pure Ones: Yuanshi Tianzun, Lingbao Tianzun and Daode Tianzun."),
+  "位於三樓，奉祀三清道祖：元始天尊、靈寶天尊、太上道祖。",
+  "On the third floor, dedicated to the Three Pure Ones: Yuanshi Tianzun, Lingbao Tianzun and Daode Tianzun."),
 ]
 MASTER = [
  ("堂主何春燕女士出生於台灣宜蘭縣羅東鎮，家境小康。父親是畫家，母親是虔誠的媽祖信徒，自幼受父母教誨，立身處世講求篤信與堅實。",
@@ -254,7 +257,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
 ''')
 
 # ---------------------------------------------------------------- 本堂設施
-page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、五路財神殿、太歲殿、三清殿。", f'''
+page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、月老神君、五路財神殿、太歲殿、三清殿。", f'''
 {head("本堂設施","Facilities")}
 <section class="gutter"><div class="container">
   {DRAFT}

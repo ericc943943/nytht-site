@@ -70,10 +70,11 @@ LAMPS4 = [
 def lamp_icon(color):
     return f'''<svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="{color}" opacity=".9"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="{color}"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="{color}" opacity=".7"/></svg>'''
 
-HALL_KEYS = ["main", "wenchang", "caishen", "taisui", "sanqing"]
+HALL_KEYS = ["main", "wenchang", "yuelao", "caishen", "taisui", "sanqing"]
 HALL_DEITIES = {
     "main": [("無極瑤池大聖西王金母大天尊","Golden Mother of the Jasper Pool"),("玉皇赦罪賜福大天尊","Jade Emperor"),("無上虛空地母無量慈尊","Earth Mother"),("觀音大士","Guanyin"),("關聖帝君","Guan Di"),("天上聖母","Mazu"),("中壇元帥","Marshal Zhongtan"),("福德正神","Earth God")],
     "wenchang": [("文昌帝君","Wenchang Dijun"),("魁斗星君","Kuidou Xingjun"),("大成至聖先師","Confucius"),("天聾、地啞二聖","Tianlong and Diya")],
+    "yuelao": [("月老神君","Yue Lao, the Old Man under the Moon")],
     "caishen": [("天官大帝","Heavenly Official"),("文財神范蠡","Fan Li"),("武財神趙公明","Zhao Gongming"),("南山通利仙官石崇","Shi Chong"),("北府納庫仙官沈萬山","Shen Wanshan"),("招財、進寶童子","Zhaocai and Jinbao")],
     "taisui": [("斗姆元君","Doumu Yuanjun"),("六十甲子太歲星君","Sixty Tai Sui generals")],
     "sanqing": [("元始天尊","Yuanshi Tianzun"),("靈寶天尊","Lingbao Tianzun"),("太上道祖","Daode Tianzun")],
@@ -267,7 +268,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
 ''')
 
 # ================================================================ 本堂設施
-page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、五路財神殿、太歲殿、三清殿。", f'''
+page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、月老神君、五路財神殿、太歲殿、三清殿。", f'''
 {pagehead("","","本堂設施","Facilities")}
 <section class="gutter"><div class="container">
   {DRAFT}

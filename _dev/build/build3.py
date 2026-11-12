@@ -59,7 +59,7 @@ BAND = f'''<section class="band gutter" style="padding-block:0"><div class="cont
 
 # 點燈：舊網站的三個小標＋五路財神燈（舊網站無說明）
 LAMPS4 = [
-  ("◎安太歲", "◎ Tai Sui", "太歲為值年神祇。生肖與當年太歲正沖或對沖者，宜安奉太歲，祈求化險為夷，避除三災九橫之厄。本堂於二樓太歲殿供奉六十甲子太歲星君，為美東唯一的星辰殿。",
+  ("◎安太歲", "◎ Tai Sui", "太歲為值年神祇。生肖與當年太歲正沖或對沖者，宜安奉太歲，祈求化險為夷，避除三災九橫之厄。本堂於二樓太歲殿供奉六十甲子太歲星君，為美東唯一的太歲殿。",
    "Those whose zodiac sign clashes with the year's Tai Sui are advised to make offerings to Tai Sui to turn misfortune aside. The sixty Tai Sui generals are enshrined in our second-floor Tai Sui Hall.", "#356D82"),
   ("◎光明燈", "◎ Guangming Lamp", "人的本命元神不生不滅，故光明燈又稱元神燈、長明燈、無盡燈。點燈祈求運勢亨通、精神昂揚，慈光普照、破除黑暗。",
    "Also called the Lamp of the Original Spirit or the Everlasting Lamp, it is lit for good fortune and vitality.", "#58BEEE"),

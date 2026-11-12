@@ -46,7 +46,7 @@ def head(zh, en):
 HISTORY = [
  ("紐約花蓮慈惠堂成立於1991年，由何俊忠居士創辦，老堂主何游阿粉女士十幾年的耕耘，再由現任的堂主何春燕接任後，才有今日的莊嚴道場。",
   "New York Hua Lian Tsu Hui Temple was founded in 1991 by Mr. Ho Chun-Chung. After more than ten years of devoted work by the former head, Mrs. Ho Yu A-Fen, leadership passed to the current head, Ms. Ho Chun-Yen, under whom the temple has become the dignified place of worship it is today."),
- ("創堂初期，何俊忠居士於紐約法拉盛羅斯福路開堂設教，弘揚聖命，金母賜名「紐約花蓮慈惠堂」。母娘慈恩濟世，受惠信眾口耳相傳，四方慕德投歸法座的信眾紛至沓來，與日俱增，西元2002年乃遷至法拉盛大學點大道，不旋踵。西元2007年金母揮鸞指示「盡早興建宗教文化道場，舉辦社會公益活動」，是時立願效勞和隨修信徒眾多，聞訊四出尋訪，終在2008年在母娘顯靈與貴人張善良先生結緣下尋得一寶地於大學點龍頭地段有片空地，正是金母靈示之建廟用地，得信徒鼎力捐輸，福蒙金母神威之福應，終於購下這片土地。",
+ ("創堂初期，何俊忠居士於紐約法拉盛羅斯福路開堂設教，弘揚聖命，金母賜名「紐約花蓮慈惠堂」。母娘慈恩濟世，受惠信眾口耳相傳，四方慕德投歸法座的信眾紛至沓來，與日俱增，西元2002年乃遷至法拉盛大學點大道，不旋踵，西元2007年金母揮鸞指示「盡早興建宗教文化道場，舉辦社會公益活動」，是時立願效勞和隨修信徒眾多，聞訊四出尋訪，終在2008年在母娘顯靈與貴人張善良先生結緣下尋得一寶地於大學點龍頭地段有片空地，正是金母靈示之建廟用地，得信徒鼎力捐輸，福蒙金母神威之福應，終於購下這片土地。",
   "In its early days, Mr. Ho Chun-Chung opened the temple on Roosevelt Avenue in Flushing to spread the Mother's teachings, and the Golden Mother named it New York Hua Lian Tsu Hui Temple. As word of the Mother's compassion spread, devotees came from all directions in growing numbers, and in 2002 the temple moved to College Point Boulevard. In 2007 the Golden Mother instructed, through divine writing, that a religious and cultural center be built as soon as possible and that the temple hold charitable activities for the community. Many devotees vowed to help and searched far and wide. In 2008, through the Mother's manifestation and a fortunate meeting with Mr. Chang Shan-Liang, they found a vacant lot at a prime location in College Point — the very site the Golden Mother had indicated. With the devotees' generous donations and the Mother's blessing, the land was purchased."),
  ("只是，2009年建堂之初，困難重重和外來的壓力，和美國工程學上的種種規定和申請上的困難，在母娘的顯靈下突然來了一位建商Peter Chen聞建廟之聲，一呼百應，在Peter Chen的帶領下，立刻開工破土正式動土興工，擇善固執、外柔內剛的何堂主自感肩負重任，日日親自帶領師兄師姐看守廟地，她視建廟乃是一種信心的考驗與殊榮，這種為芸芸眾生創設靈修聖地而不畏艱難的精神贏得眾多信徒效法，皆抱以感恩、回饋的真情，承受辛苦而無怨無悔。",
   "When construction began in 2009, the temple faced many obstacles: outside pressure, American engineering regulations and a difficult permit process. Then, through the Mother's manifestation, a builder named Peter Chen heard of the project and answered the call. Under his leadership ground was broken and construction began. Ms. Ho, gentle in manner but firm in resolve, felt the weight of this responsibility and led the brothers and sisters every day in watching over the site. She saw building the temple as both a test of faith and an honor, and her determination to create a sacred place for all people, whatever the hardship, inspired many devotees, who gave their gratitude and effort without complaint."),
@@ -54,7 +54,7 @@ HISTORY = [
   "As the Mother taught, “every barrier is hard, yet every barrier is passed.” Through the united effort of Ms. Ho and the devotees, construction was completed, and on June 13, 2012 (the 24th day of the 4th lunar month) the temple held the enthronement ceremony of the Golden Mother of the Jasper Pool — completing the only sacred hall of traditional Eastern architecture on the US East Coast, a place to enlighten the world, through which divine grace reaches far and all living beings receive its blessing."),
  ("位居皇后區大學點上的紐約花蓮慈惠堂坐擁城市都會中為一絕佳的地理福地。",
   "Located in College Point, Queens, the temple enjoys an exceptionally auspicious site in the heart of the city."),
- ("依台灣名師設計而建的紐約花蓮慈惠堂雄偉壯觀，殿脊銅瓦覆頂，脊昂高翅，在中更顯富麗莊嚴，靈氣十足，拾級而上，爐煙觸目，清香四溢，讓人一洗風塵，實有絕殊離俗之感。",
+ ("依台灣名師設計而建的紐約花蓮慈惠堂雄偉壯觀，殿脊銅瓦覆頂，脊昂高翅，更顯富麗莊嚴，靈氣十足，拾級而上，爐煙觸目，清香四溢，讓人一洗風塵，實有絕殊離俗之感。",
   "Designed by a renowned Taiwanese master, the temple is grand and majestic, its ridges roofed in bronze tiles with soaring upturned eaves, rich, solemn and full of spiritual energy. Climbing the steps, one sees incense smoke rising and smells its fragrance — the dust of the world falls away, and one feels truly removed from the ordinary."),
 ]
 NEWS = [
@@ -68,7 +68,7 @@ NEWS = [
  ("09/06/2025", "2025 瑤池金母文化節", "2025 Golden Mother Cultural Festival"),
  ("05/21/2024", "北港朝天宮媽祖首度遶境紐約，本堂恭迎聖駕，遶境後分靈本堂", "Beigang Mazu tours New York and is enshrined at our temple"),
  ("02/10/2024", "2024 新春祈安法會（2/10–2/18）", "2024 Lunar New Year Blessing Ceremony (Feb 10–18)"),
- ("09/17/2017", "5/20 紐約花蓮慈惠堂堂慶,謝金燕嘉賓演出!", "5/20 Temple Anniversary Celebration with guest performer Jeannie Hsieh"),
+ ("09/17/2017", "5/20 紐約花蓮慈惠堂堂慶，謝金燕嘉賓演出！", "5/20 Temple Anniversary Celebration with guest performer Jeannie Hsieh"),
  ("11/01/2016", "無上虛空地母娘娘聖誕", "Birthday of the Earth Mother"),
  ("07/26/2016", "2016 瑤池金母文化節", "2016 Golden Mother Cultural Festival"),
  ("12/23/2015", "紐約花蓮慈惠堂歲末年終感恩餐會", "Year-end Thanksgiving Dinner"),
@@ -97,17 +97,17 @@ GALLERY_MORE = [
  ("慈惠堂母娘聖誕-文化節 美女群練舞中", "Golden Mother's Birthday Cultural Festival — dancers rehearsing"),
 ]
 CAL = [
- ("農曆一月九日", "玉皇上帝聖誕 (點太歲、光明燈)", "1st month, day 9", "Birthday of the Jade Emperor (Tai Sui and Guangming lamps)"),
+ ("農曆正月初九", "玉皇上帝聖誕 (點太歲、光明燈)", "1st month, day 9", "Birthday of the Jade Emperor (Tai Sui and Guangming lamps)"),
  ("農曆二月上旬", "春季祈安禮斗法會", "Early 2nd month", "Spring Li Dou Blessing Ceremony"),
  ("農曆二月十六日", "花蓮晉香 (聖地之旅)", "2nd month, day 16", "Pilgrimage to Hualien (journey to the holy site)"),
  ("農曆二月十九日", "觀世音菩薩聖誕", "2nd month, day 19", "Birthday of Guanyin Bodhisattva"),
- ("農曆三月二三日", "天上聖母聖誕", "3rd month, day 23", "Birthday of Mazu"),
- ("農曆六月三日", "蟠桃聖會", "6th month, day 3", "Peach Banquet Festival"),
- ("農曆六月七日", "開天門消災法會", "6th month, day 7", "Opening of Heaven's Gate Ceremony"),
+ ("農曆三月二十三日", "天上聖母聖誕", "3rd month, day 23", "Birthday of Mazu"),
+ ("農曆六月初三", "蟠桃聖會", "6th month, day 3", "Peach Banquet Festival"),
+ ("農曆六月初七", "開天門消災法會", "6th month, day 7", "Opening of Heaven's Gate Ceremony"),
  ("農曆七月十八日", "瑤池金母聖誕", "7th month, day 18", "Birthday of the Golden Mother of the Jasper Pool"),
  ("農曆七月十九～二十日", "超渡法會", "7th month, days 19–20", "Deliverance Ceremony"),
- ("農曆九月九日", "斗姆元君聖誕", "9th month, day 9", "Birthday of Doumu Yuanjun"),
- ("農曆九月九日", "中壇元帥聖誕", "9th month, day 9", "Birthday of Marshal Zhongtan"),
+ ("農曆九月初九", "斗姆元君聖誕", "9th month, day 9", "Birthday of Doumu Yuanjun"),
+ ("農曆九月初九", "中壇元帥聖誕", "9th month, day 9", "Birthday of Marshal Zhongtan"),
  ("農曆九月", "秋季祈安禮斗法會", "9th month", "Autumn Li Dou Blessing Ceremony"),
  ("農曆十月十八日", "地母元君聖誕", "10th month, day 18", "Birthday of the Earth Mother"),
  ("農曆十一月十一日", "太乙救苦天尊聖誕", "11th month, day 11", "Birthday of Taiyi Jiuku Tianzun"),
@@ -242,7 +242,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
   <div class="reading prose">
     {DRAFT}
     <h2 class="subhead" style="margin-top:0">{L("◎安太歲","◎ Tai Sui")}</h2>
-    {P("太歲為值年神祇。生肖與當年太歲正沖或對沖者，宜安奉太歲，祈求化險為夷，避除三災九橫之厄。本堂於二樓太歲殿供奉六十甲子太歲星君，為美東唯一的星辰殿。",
+    {P("太歲為值年神祇。生肖與當年太歲正沖或對沖者，宜安奉太歲，祈求化險為夷，避除三災九橫之厄。本堂於二樓太歲殿供奉六十甲子太歲星君，為美東唯一的太歲殿。",
        "Tai Sui is the deity presiding over each year. Those whose zodiac sign clashes with the year's Tai Sui are advised to make offerings to Tai Sui, to turn misfortune aside. The sixty Tai Sui generals are enshrined in our second-floor Tai Sui Hall, the only one on the US East Coast.")}
     <h2 class="subhead">{L("◎光明燈","◎ Guangming Lamp")}</h2>
     {P("人的本命元神不生不滅，故光明燈又稱元神燈、長明燈、無盡燈。點燈祈求運勢亨通、精神昂揚，慈光普照、破除黑暗。每年農曆十二月二十日舉行謝平安法會，並啟點翌年光明燈及安奉太歲。",

@@ -15,17 +15,17 @@ const TEMPLE = {
 /* ================= 年度行事（農曆） =================
    m：農曆月；d：農曆日（沒有固定日期就不填，改填 approx）；key：重要節慶會加底色 */
 const CALENDAR = [
-  {m:1,  d:9,  lz:"農曆一月九日", s27:"2027/2/14（日）", zh:"玉皇上帝聖誕 (點太歲燈、光明燈)", en:"Birthday of the Jade Emperor (Tai Sui and Guangming lamps)"},
+  {m:1,  d:9,  lz:"農曆正月初九", s27:"2027/2/14（日）", zh:"玉皇上帝聖誕 (點太歲燈、光明燈)", en:"Birthday of the Jade Emperor (Tai Sui and Guangming lamps)"},
   {m:2,  lz:"農曆二月上旬", s27:"2027/3/8（一）～3/17（三）之間", approxEn:"Early 2nd month", zh:"春季祈安禮斗法會", en:"Spring Li Dou Blessing Ceremony", key:true},
   {m:2,  d:16, lz:"農曆二月十六日", s27:"2027/3/23（二）", zh:"花蓮晉香 (聖地之旅)", en:"Pilgrimage to Hualien (journey to the holy site)"},
   {m:2,  d:19, lz:"農曆二月十九日", s27:"2027/3/26（五）", zh:"觀世音菩薩聖誕", en:"Birthday of Guanyin Bodhisattva"},
-  {m:3,  d:23, lz:"農曆三月二三日", s27:"2027/4/29（四）", zh:"天上聖母聖誕", en:"Birthday of Mazu"},
-  {m:6,  d:3,  lz:"農曆六月三日", s27:"2027/7/6（二）", zh:"蟠桃聖會", en:"Peach Banquet Festival"},
-  {m:6,  d:7,  lz:"農曆六月七日", s27:"2027/7/10（六）", zh:"開天門消災法會", en:"Opening of Heaven's Gate Ceremony"},
+  {m:3,  d:23, lz:"農曆三月二十三日", s27:"2027/4/29（四）", zh:"天上聖母聖誕", en:"Birthday of Mazu"},
+  {m:6,  d:3,  lz:"農曆六月初三", s27:"2027/7/6（二）", zh:"蟠桃聖會", en:"Peach Banquet Festival"},
+  {m:6,  d:7,  lz:"農曆六月初七", s27:"2027/7/10（六）", zh:"開天門消災法會", en:"Opening of Heaven's Gate Ceremony"},
   {m:7,  d:18, lz:"農曆七月十八日", s27:"2027/8/19（四）", zh:"瑤池金母聖誕", en:"Birthday of the Golden Mother of the Jasper Pool", key:true},
   {m:7,  d:19, d2:20, lz:"農曆七月十九～二十日", s27:"2027/8/20（五）～8/21（六）", zh:"超渡法會", en:"Deliverance Ceremony", key:true},
-  {m:9,  d:9,  lz:"農曆九月九日", s27:"2027/10/8（五）", zh:"斗姆元君聖誕", en:"Birthday of Doumu Yuanjun"},
-  {m:9,  d:9,  lz:"農曆九月九日", s27:"2027/10/8（五）", zh:"中壇元帥聖誕", en:"Birthday of Marshal Zhongtan"},
+  {m:9,  d:9,  lz:"農曆九月初九", s27:"2027/10/8（五）", zh:"斗姆元君聖誕", en:"Birthday of Doumu Yuanjun"},
+  {m:9,  d:9,  lz:"農曆九月初九", s27:"2027/10/8（五）", zh:"中壇元帥聖誕", en:"Birthday of Marshal Zhongtan"},
   {m:9,  lz:"農曆九月", s27:"2027/9/30（四）～10/28（四）之間", approxEn:"9th month", zh:"秋季祈安禮斗法會", en:"Autumn Li Dou Blessing Ceremony", key:true},
   {m:10, d:18, lz:"農曆十月十八日", s27:"2027/11/15（一）", zh:"地母娘娘聖誕", en:"Birthday of the Earth Mother"},
   {m:11, d:11, lz:"農曆十一月十一日", s27:"2027/12/8（三）", zh:"太乙救苦天尊聖誕", en:"Birthday of Taiyi Jiuku Tianzun"},

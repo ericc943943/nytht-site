@@ -105,8 +105,9 @@ index_body = f'''
   <div>
     {B("紐約花蓮慈惠堂", "New York Hua Lian Tsu Hui Temple", "h1", "sr-only")}
     <p class="greeting">{L("母娘慈悲","Mu Niang Ci Bei · The Golden Mother's compassion")}</p>
-    {B("位於皇后區大學點的紐約花蓮慈惠堂成立於1991年，由何俊忠居士創辦，經老堂主何游阿粉女士十多年耕耘，再由現任的堂主何春燕接任後，才有今日的莊嚴道場。", "Located in College Point, Queens, New York Hua Lian Tsu Hui Temple was founded in 1991 by Mr. Ho Chun-Chung. After more than ten years of devoted work by the former head, Mrs. Ho Yu A-Fen, leadership passed to the current head, Ms. Ho Chun-Yen, under whom the temple has become the dignified place of worship it is today.", "p", "lead")}
-    {B(C.DEITY[7][:C.DEITY[7].index("快速")+2] + "，信仰瑤池金母的宮堂多以慈惠堂為名。", "The faith in the Golden Mother spread rapidly throughout Taiwan after her manifestation in Ji'an, Hualien, and many of her temples are named Tsu Hui Tang (慈惠堂).", "p", "lead")}
+    {B("紐約花蓮慈惠堂位於皇后區大學點，1991年由何俊忠居士創辦。歷經老堂主何游阿粉女士十多年的耕耘，以及現任堂主何春燕女士的接續努力，才有今日莊嚴的道場。", "Located in College Point, Queens, New York Hua Lian Tsu Hui Temple was founded in 1991 by Mr. Ho Chun-Chung. Through more than ten years of devoted work by the former head, Mrs. Ho Yu A-Fen, and the continued efforts of the current head, Ms. Ho Chun-Yen, the temple has become the dignified place of worship it is today.", "p", "lead")}
+    {B("本堂奉祀瑤池金母，信徒尊稱「母娘」。自金母聖鸞降駕花蓮吉安以來，母娘信仰在台灣廣為流傳，奉祀母娘的宮堂多以「慈惠堂」為名。", "The temple is dedicated to the Golden Mother of the Jasper Pool, lovingly called Mu Niang. Since her manifestation in Ji'an, Hualien, her faith has spread widely across Taiwan, and many of her temples are named Tsu Hui Tang (慈惠堂).", "p", "lead")}
+    <p class="lead"><a href="history.html">{L("紐約花蓮慈惠堂由來 》》", "Our history 》》")}</a></p>
     <div class="actions">
       <a class="cta big" href="https://nytht.vercel.app/">{L("點燈報名", "Lamp lighting")}</a>
       <a class="cta big ghost" href="https://nytht.vercel.app/">{L("法會報名", "Ceremonies")}</a>

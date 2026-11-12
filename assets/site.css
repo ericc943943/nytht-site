@@ -263,6 +263,18 @@ main section{padding-block:48px}
 .taisui-now .name{white-space:nowrap}
 .taisui-now .name b{color:var(--red)}
 .taisui-now .range{font-size:.88rem;margin-top:2px}
+.taisui-now.other{border-left-color:#9FB6C3;background:#F2F6F8}
+.taisui-now .ts-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.taisui-now .ts-nav{display:flex;gap:6px}
+.taisui-now .ts-nav button{font:inherit;font-size:.85rem;color:var(--red);background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer;white-space:nowrap}
+.taisui-now .ts-nav button:hover{border-color:var(--red)}
+.taisui-now .ts-nav button:disabled{opacity:.35;cursor:default}
+.taisui-now .ts-bio{font-size:.95rem;line-height:1.8;border-top:1px solid var(--line);margin-top:10px;padding-top:10px}
+.taisui-now .ts-bio:empty{display:none}
+.taisui-now .ts-src{font-size:.78rem;margin-top:6px}
+.taisui-now .ts-back{font:inherit;font-size:.85rem;color:var(--gold);background:none;border:0;padding:0;margin-top:8px;cursor:pointer}
+.taisui-now .ts-back[hidden]{display:none}
+.taisui-all td.sel{background:#F2F6F8;outline:1px dashed #9FB6C3}
 .taisui-all{margin-top:14px}
 .taisui-all summary{cursor:pointer;color:var(--red);font-weight:500}
 .taisui-all .taisui{margin-top:10px}

@@ -156,9 +156,13 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：光明�
 
 # ---------------------------------------------------------------- 本堂設施（照樓層）
 taisui_now = f"""<div class="taisui-now" id="taisuiNow" hidden>
-  <div class="label">{L("今年值年太歲","Tai Sui of the Year")}</div>
+  <div class="ts-head"><div class="label" id="tsLabel">{L("今年值年太歲","Tai Sui of This Year")}</div>
+    <div class="ts-nav"><button type="button" id="tsPrev">‹ {L("上一年","Prev")}</button><button type="button" id="tsNext">{L("下一年","Next")} ›</button></div></div>
   <div class="name"><span id="tsYear"></span><b id="tsName"></b></div>
   <div class="range muted" id="tsRange"></div>
+  <div class="ts-bio" id="tsBio"></div>
+  <div class="ts-src muted">{L("依民間流傳之《六十甲子太歲傳略》","Based on the traditional folk biographies of the Sixty Tai Sui")}</div>
+  <button type="button" class="ts-back" id="tsBack" hidden>↩ {L("回到今年","Back to this year")}</button>
 </div>"""
 taisui_all = '<details class="taisui-all"><summary>' + L(C.TAISUI_LIST_TITLE.rstrip("："), "The Sixty Tai Sui Generals") + '</summary><div class="tablewrap"><table class="taisui"><tbody>' + "".join(
     "<tr>" + "".join(f'<td data-gz="{n[:2]}">{n}</td>' for n in C.TAISUI_LIST[i:i+3]) + "</tr>" for i in range(0, len(C.TAISUI_LIST), 3)) + "</tbody></table></div></details>"

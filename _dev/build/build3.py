@@ -67,8 +67,10 @@ LAMPS4 = [
    "A Wenchang blessing rite for those facing examinations, to open wisdom and bring success in exams.", "#4698BE"),
   ("五路財神燈", "Five Wealth Gods Lamp", "（舊網站沒有這盞燈的說明，請提供文字。）", "(Description to be added.)", "#89A9BE"),
 ]
-def lamp_icon(color):
-    return f'''<svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="{color}" opacity=".9"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="{color}"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="{color}" opacity=".7"/></svg>'''
+LAMP_FLAME, LAMP_BASE = "#F2B33D", "#356D82"  # 火焰金＋燈座深藍，四盞燈統一（Eric 2026-11-12 選 C）
+def lamp_icon(color=None):
+    f, b = LAMP_FLAME, LAMP_BASE
+    return f'''<svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="{f}"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="{b}"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="{b}" opacity=".7"/></svg>'''
 
 HALL_KEYS = ["main", "wenchang", "caishen", "taisui", "sanqing"]
 HALL_FLOOR = {"main":1,"caishen":1,"wenchang":1,"taisui":2,"sanqing":3}

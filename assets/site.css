@@ -542,4 +542,6 @@ main section.quick{padding-block:0}
 .faq details[open] summary{border-bottom:1px solid var(--line)}
 .faq .a{padding:12px 0 16px;line-height:1.8}
 .faq .a p+p{margin-top:8px}
+.faq-cat{font-size:1.2rem;color:var(--red);margin:32px 0 12px}
+.faq-cat:first-child{margin-top:0}
 .tbc{background:#FAEEDA;color:#854F0B;border-radius:4px;padding:0 4px;font-size:.85em;font-weight:700;white-space:nowrap}

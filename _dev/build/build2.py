@@ -58,6 +58,16 @@ HISTORY = [
   "Designed by a renowned Taiwanese master, the temple is grand and majestic, its ridges roofed in bronze tiles with soaring upturned eaves, rich, solemn and full of spiritual energy. Climbing the steps, one sees incense smoke rising and smells its fragrance — the dust of the world falls away, and one feels truly removed from the ordinary."),
 ]
 NEWS = [
+ ("09/13/2026", "發放乾糧、平安米，歡迎附近居民索取", "Free dry food and blessed rice for neighbors"),
+ ("09/06/2026", "孝道報恩拔度法會", "Filial Gratitude Deliverance Ceremony"),
+ ("08/30/2026", "2026 瑤池金母文化節", "2026 Golden Mother Cultural Festival"),
+ ("07/31/2026", "廟頂瓦片修繕工程，歡迎樂捐瓦片（每片 $50）", "Roof tile restoration: tile donations welcome ($50 per tile)"),
+ ("05/09/2026", "天上聖母（媽祖）聖誕慶典", "Mazu Birthday Celebration"),
+ ("03/03/2026", "五路財神法會（正月十五）", "Five Wealth Gods Ceremony (1st month, day 15)"),
+ ("02/25/2026", "玉皇上帝萬壽上燈法會（正月初九）", "Jade Emperor's Birthday Lamp Ceremony (1st month, day 9)"),
+ ("09/06/2025", "2025 瑤池金母文化節", "2025 Golden Mother Cultural Festival"),
+ ("05/21/2024", "北港朝天宮媽祖首度遶境紐約，本堂恭迎聖駕，遶境後分靈本堂", "Beigang Mazu tours New York and is enshrined at our temple"),
+ ("02/10/2024", "2024 新春祈安法會（2/10–2/18）", "2024 Lunar New Year Blessing Ceremony (Feb 10–18)"),
  ("09/17/2017", "5/20 紐約花蓮慈惠堂堂慶,謝金燕嘉賓演出!", "5/20 Temple Anniversary Celebration with guest performer Jeannie Hsieh"),
  ("11/01/2016", "無上虛空地母娘娘聖誕", "Birthday of the Earth Mother"),
  ("07/26/2016", "2016 瑤池金母文化節", "2016 Golden Mother Cultural Festival"),
@@ -106,22 +116,19 @@ CAL = [
 HALLS = [
  ("大殿", "Main Hall", "hall-main.jpg",
   "中央無極聖殿奉祀主神無極瑤池大聖西王金母大天尊，右側奉祀玄穹高上帝玉皇赦罪賜福大天尊，左側奉祀無上虛空地母無量慈尊。神龕前同祀觀音大士、關聖帝君、天上聖母、中壇元帥與福德正神等諸位神明。",
-  "At the center the principal deity, the Golden Mother of the Jasper Pool, is enshrined; to the right is the Jade Emperor and to the left the Earth Mother. Before the altar are Guanyin, Guan Di, Mazu, Marshal Zhongtan and the Earth God, among others."),
+  "At the center the principal deity, the Golden Mother of the Jasper Pool, is enshrined; to the right is the Jade Emperor and to the left the Earth Mother. Mazu (Holy Mother of Heaven), Ksitigarbha Bodhisattva, Guanyin and Ji Gong are also enshrined in the hall."),
  ("文昌帝君殿", "Hall of Wenchang", "hall-wenchang.jpg",
   "奉祀文昌帝君、魁斗星君與大成至聖先師，另配祀天聾、地啞二聖。",
-  "Dedicated to Wenchang Dijun, Kuidou Xingjun and Confucius, with the attendants Tianlong and Diya."),
- ("月老神君", "Yue Lao", "hall-yuelao.jpg",
-  "月老神君供奉於文昌殿前方，主掌人間姻緣。",
-  "Yue Lao, the Old Man under the Moon, is enshrined in front of the Wenchang altar and watches over love and marriage."),
+  "Dedicated to Wenchang Dijun, Kuidou Xingjun, Confucius and the Four Marshals (Wen, Wang, Ma and Zhao), Daoist guardian generals who protect the sacred grounds and drive away evil. On the altar table in front are Yue Lao, the He-He Immortals, Ji Gong and Guanyin."),
  ("五路財神殿", "Hall of the Five Wealth Gods", "hall-caishen.jpg",
   "奉祀天官大帝、文財神范蠡、武財神趙公明、南山通利仙官石崇、北府納庫仙官沈萬山，另有招財、進寶二位童子。",
-  "Dedicated to the Heavenly Official and the gods of wealth Fan Li, Zhao Gongming, Shi Chong and Shen Wanshan, with the attendants Zhaocai and Jinbao."),
+  "Dedicated to the Five Gods of Wealth: the Heavenly Official (Emperor Yao), Zhao Gongming, Bi Gan, Shi Chong and Shen Wansan, together with the Earth God, Guanyin and Guan Di. A jigai (purification rite) desk is set up in front of the hall."),
  ("太歲殿", "Tai Sui Hall", "hall-taisui.jpg",
-  "位於二樓，奉祀斗姆元君與六十甲子太歲星君，為美東唯一的太歲殿。",
-  "On the second floor, home of Doumu Yuanjun and the sixty Tai Sui generals — the only Tai Sui hall on the US East Coast."),
+  "奉祀斗姆元君與六十甲子太歲星君，為美東唯一的太歲殿。",
+  "Home of Doumu Yuanjun and the sixty Tai Sui generals — the only Tai Sui hall on the US East Coast."),
  ("三清殿", "Hall of the Three Pure Ones", "hall-sanqing.jpg",
-  "位於三樓，奉祀三清道祖：元始天尊、靈寶天尊、太上道祖。",
-  "On the third floor, dedicated to the Three Pure Ones: Yuanshi Tianzun, Lingbao Tianzun and Daode Tianzun."),
+  "奉祀三清道祖：元始天尊、靈寶天尊、道德天尊（太上老君）。",
+  "Dedicated to the Three Pure Ones: Yuanshi Tianzun, Lingbao Tianzun and Daode Tianzun (Laozi)."),
 ]
 MASTER = [
  ("堂主何春燕女士出生於台灣宜蘭縣羅東鎮，家境小康。父親是畫家，母親是虔誠的媽祖信徒，自幼受父母教誨，立身處世講求篤信與堅實。",
@@ -142,7 +149,7 @@ index_body = f'''
 
 <section class="gutter" style="padding-block:28px;background:var(--red-deep);color:#F6E9D2"><div class="container" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
   {P("點燈、法會可以線上報名，送出後帶繳費單到堂裡繳交現金。", "Register online for lamps and ceremonies, then bring your payment slip to the temple.")}
-  <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="cta" style="background:var(--gold-bright);color:#2A1A08" href="https://nytht.vercel.app/#lamp">{L("點燈報名","Lamp lighting")}</a><a class="cta ghost" style="color:#F6E9D2;border-color:rgba(246,233,210,.5)" href="https://nytht.vercel.app/">{L("法會報名","Ceremonies")}</a></div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="cta" style="background:var(--gold-bright);color:#2A1A08" href="https://nytht.vercel.app/">{L("點燈報名","Lamp lighting")}</a><a class="cta ghost" style="color:#F6E9D2;border-color:rgba(246,233,210,.5)" href="https://nytht.vercel.app/">{L("法會報名","Ceremonies")}</a></div>
 </div></section>
 
 <section class="gutter"><div class="container grid g2" style="align-items:start">
@@ -250,14 +257,14 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
     <h2 class="sec-title" style="margin:0">{L("線上點燈和法會報名","Lamp & Ceremony Registration")}</h2>
     {P("個人光明燈、太歲燈、五路財神燈、文昌燈，每盞 $120。送出後帶繳費單到堂裡繳交現金。",
        "Guangming, Tai Sui, Five Wealth Gods and Wenchang lamps, $120 each. Bring the payment slip to the temple and pay in cash.", "muted")}
-    <a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名","Register for a lamp")}</a>
+    <a class="cta big" href="https://nytht.vercel.app/">{L("點燈報名","Register for a lamp")}</a>
     {P("也可以來電登記：", "You may also register by phone: ", "muted")}<p><span data-tel></span></p>
   </div>
 </div></section>
 ''')
 
 # ---------------------------------------------------------------- 本堂設施
-page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、月老神君、五路財神殿、太歲殿、三清殿。", f'''
+page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、五路財神殿、太歲殿、三清殿。", f'''
 {head("本堂設施","Facilities")}
 <section class="gutter"><div class="container">
   {DRAFT}
@@ -297,7 +304,7 @@ page("contact.html", "聯繫本堂", "紐約花蓮慈惠堂地址、電話與 Em
     <div><dt>Email</dt><dd data-email></dd></div>
     <div><dt>Facebook</dt><dd><a data-fb href="#" target="_blank" rel="noopener">{L("紐約花蓮慈惠堂","Our page")}</a></dd></div>
   </dl>
-  <iframe class="mapframe" title="Map" loading="lazy" src="https://maps.google.com/maps?q=22-06%20121st%20St%2C%20College%20Point%2C%20NY%2011356&z=15&output=embed"></iframe>
+  <iframe class="mapframe" title="Map" loading="lazy" src="https://maps.google.com/maps?q=22-02%20121st%20St%2C%20College%20Point%2C%20NY%2011356&z=15&output=embed"></iframe>
 </div></section>
 ''')
 print("ok")

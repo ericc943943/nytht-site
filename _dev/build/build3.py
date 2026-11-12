@@ -52,7 +52,7 @@ BAND = f'''<section class="band gutter" style="padding-block:0"><div class="cont
   <div>{B("線上點燈和法會報名", "Lamp & Ceremony Registration", "h2")}
     {B("點燈、法會可以線上報名，送出後帶繳費單到堂裡繳交現金。", "Register online, then bring your payment slip to the temple and pay in cash.")}</div>
   <div style="display:flex;flex-wrap:wrap;gap:12px">
-    <a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Lamp lighting")}</a>
+    <a class="cta big" href="https://nytht.vercel.app/">{L("點燈報名", "Lamp lighting")}</a>
     <a class="cta big ghost" href="https://nytht.vercel.app/">{L("法會報名", "Ceremonies")}</a>
   </div>
 </div></section>'''
@@ -70,35 +70,68 @@ LAMPS4 = [
 def lamp_icon(color):
     return f'''<svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c4 6 8 9 8 15a8 8 0 0 1-16 0c0-6 4-9 8-15z" fill="{color}" opacity=".9"/><path d="M24 15c2 3 3.5 4.5 3.5 7a3.5 3.5 0 0 1-7 0c0-2.5 1.5-4 3.5-7z" fill="#FFFFFF"/><rect x="14" y="31" width="20" height="5" rx="2" fill="{color}"/><rect x="18" y="36" width="12" height="6" rx="1.5" fill="{color}" opacity=".7"/></svg>'''
 
-HALL_KEYS = ["main", "wenchang", "yuelao", "caishen", "taisui", "sanqing"]
+HALL_KEYS = ["main", "wenchang", "caishen", "taisui", "sanqing"]
+HALL_FLOOR = {"main":1,"caishen":1,"wenchang":1,"taisui":2,"sanqing":3}
 HALL_DEITIES = {
-    "main": [("無極瑤池大聖西王金母大天尊","Golden Mother of the Jasper Pool"),("玉皇赦罪賜福大天尊","Jade Emperor"),("無上虛空地母無量慈尊","Earth Mother"),("觀音大士","Guanyin"),("關聖帝君","Guan Di"),("天上聖母","Mazu"),("中壇元帥","Marshal Zhongtan"),("福德正神","Earth God")],
-    "wenchang": [("文昌帝君","Wenchang Dijun"),("魁斗星君","Kuidou Xingjun"),("大成至聖先師","Confucius"),("天聾、地啞二聖","Tianlong and Diya")],
-    "yuelao": [("月老神君","Yue Lao, the Old Man under the Moon")],
-    "caishen": [("天官大帝","Heavenly Official"),("文財神范蠡","Fan Li"),("武財神趙公明","Zhao Gongming"),("南山通利仙官石崇","Shi Chong"),("北府納庫仙官沈萬山","Shen Wanshan"),("招財、進寶童子","Zhaocai and Jinbao")],
-    "taisui": [("斗姆元君","Doumu Yuanjun"),("六十甲子太歲星君","Sixty Tai Sui generals")],
-    "sanqing": [("元始天尊","Yuanshi Tianzun"),("靈寶天尊","Lingbao Tianzun"),("太上道祖","Daode Tianzun")],
+    "main": {"main":[("無極瑤池金母","Golden Mother of the Jasper Pool"),("地母娘娘","Earth Mother"),("玉皇大帝","Jade Emperor")],
+             "sublabel":("殿內另奉","Also enshrined"), "sub":[("天上聖母（媽祖）","Mazu, Holy Mother of Heaven"),("地藏王菩薩","Ksitigarbha Bodhisattva"),("觀世音菩薩","Guanyin"),("濟公活佛","Ji Gong")]},
+    "caishen": {"main":[("天官賜福財神","Heavenly Official Wealth God"),("武財神","Martial Wealth God"),("文財神","Civil Wealth God"),("南山通利財神","Nanshan Tongli Wealth God"),("北府納庫財神","Beifu Naku Wealth God")],
+             "sublabel":("同殿供奉","Also enshrined"), "sub":[("福德正神","Earth God"),("觀世音菩薩","Guanyin"),("關聖帝君","Guan Di")]},
+    "wenchang": {"main":[("文昌帝君","Wenchang Dijun"),("魁斗星君","Kuidou Xingjun"),("至聖先師","Confucius"),("四大元帥","The Four Marshals")],
+             "sublabel":("殿前另奉","On the altar table in front"), "sub":[("月下老人","Yue Lao, the Matchmaker"),("和合二聖","The He-He Immortals"),("濟公活佛","Ji Gong"),("觀世音菩薩","Guanyin")]},
+    "taisui": {"main":[("斗姆元君","Doumu Yuanjun"),("六十甲子太歲星君","Sixty Tai Sui generals")]},
+    "sanqing": {"main":[("元始天尊","Yuanshi Tianzun"),("靈寶天尊","Lingbao Tianzun"),("道德天尊","Daode Tianzun")]},
 }
+def deity_html(k):
+    d = HALL_DEITIES[k]
+    h = '<div class="deitygroup"><span class="dlabel">' + L("主祀","Main deities") + '</span><ul class="deities">' + (f'<li class="dhead">{L(*d["mainhead"])}</li>' if d.get("mainhead") else "") + "".join(f"<li>{L(a,b)}</li>" for a,b in d["main"]) + "</ul></div>"
+    if d.get("sub"):
+        h += '<div class="deitygroup"><span class="dlabel">' + L(*d["sublabel"]) + '</span><ul class="deities sub">' + "".join(f"<li>{L(a,b)}</li>" for a,b in d["sub"]) + "</ul></div>"
+    return h
 TIMELINE = [("1991","於法拉盛羅斯福路開堂設教","Temple opens on Roosevelt Avenue, Flushing"),
             ("2002","遷至法拉盛大學點大道","Moves to College Point Boulevard"),
             ("2007","金母揮鸞指示興建宗教文化道場","The Golden Mother instructs that a temple be built"),
             ("2008","於大學點購得建廟用地","Land purchased in College Point"),
             ("2009","建堂動土興工","Construction begins"),
-            ("2012","國曆6月13日（農曆4月24日）瑤池金母安座大典","Enthronement ceremony, June 13, 2012")]
+            ("2012","國曆6月13日（農曆4月24日）瑤池金母安座大典","Enthronement ceremony, June 13, 2012"),
+            ("2024","5月21日，台灣北港朝天宮董事長蔡咏鍀率團護駕媽祖首度遶境紐約，於本堂恭迎聖駕；遶境後分靈本堂安座","May 21: Beigang Chaotian Temple chairman Tsai Yung-te escorts Mazu on her first tour of New York, welcomed at our temple; after the tour, Mazu is enshrined here")]
 
 # ================================================================ 首頁
 index_body = f'''
 <section class="hero gutter"><div class="container fade">
   <div class="plaque" aria-hidden="true"><span>{"".join(f"<i>{c}</i>" for c in "紐約花蓮慈惠堂")}</span></div>
   <div>
-    {B("紐約花蓮慈惠堂", "New York Hua Lian Tsu Hui Temple", "h1")}
-    {B(HISTORY[0][0], HISTORY[0][1], "p", "lead")}
+    {B("紐約花蓮慈惠堂", "New York Hua Lian Tsu Hui Temple", "h1", "sr-only")}
+    <p class="greeting">{L("母娘慈悲","Mu Niang Ci Bei · The Golden Mother's compassion")}</p>
+    {B("位於皇后區大學點的紐約花蓮慈惠堂成立於1991年，由何俊忠居士創辦，經老堂主何游阿粉女士十多年耕耘，再由現任的堂主何春燕接任後，才有今日的莊嚴道場。", "Located in College Point, Queens, New York Hua Lian Tsu Hui Temple was founded in 1991 by Mr. Ho Chun-Chung. After more than ten years of devoted work by the former head, Mrs. Ho Yu A-Fen, leadership passed to the current head, Ms. Ho Chun-Yen, under whom the temple has become the dignified place of worship it is today.", "p", "lead")}
+    {B(C.DEITY[7][:C.DEITY[7].index("快速")+2] + "，信仰瑤池金母的宮堂多以慈惠堂為名。", "The faith in the Golden Mother spread rapidly throughout Taiwan after her manifestation in Ji'an, Hualien, and many of her temples are named Tsu Hui Tang (慈惠堂).", "p", "lead")}
     <div class="actions">
-      <a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Lamp lighting")}</a>
+      <a class="cta big" href="https://nytht.vercel.app/">{L("點燈報名", "Lamp lighting")}</a>
       <a class="cta big ghost" href="https://nytht.vercel.app/">{L("法會報名", "Ceremonies")}</a>
     </div>
-    <div class="today" id="today"></div>
   </div>
+</div></section>
+
+<section class="quick"><div class="container gutter">
+  <div class="quickinfo"><div class="today" id="today"></div><div class="today" id="taisuiToday"></div></div>
+  <nav class="tiles" aria-label="服務項目 Services">
+    <a class="tile" href="lamps.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c2.5 3.5 4.5 5.5 4.5 9a4.5 4.5 0 0 1-9 0c0-3.5 2-5.5 4.5-9z"/><path d="M8 20h8"/></svg>{L("點燈祈福","Lamp Lighting")}</a><a class="tile" href="https://nytht.vercel.app/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>{L("法會報名","Ceremonies")}</a><a class="tile" href="lamps.html#taisui"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg>{L("太歲燈","Tai Sui Lamp")}</a><a class="tile" href="contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>{L("交通資訊","Directions")}</a>
+  </nav>
+</div></section>
+
+<section class="gutter"><div class="container grid g2" style="align-items:center">
+  {ph("jinmu.jpg", "瑤池金母", "The Golden Mother of the Jasper Pool")}
+  <div>
+    {sec("主神簡介", "Principal Deity")}
+    <h3 class="subhead" style="margin-top:0">{L("無極瑤池大聖西王金母大天尊", "The Golden Mother of the Jasper Pool")}</h3>
+    <div class="prose">{P("瑤池金母，俗稱西王母、王母娘娘，信徒尊稱母娘。" + C.DEITY[6][C.DEITY[6].index("西王母為女仙之宗"):C.DEITY[6].index("女仙之首")+5], "The Golden Mother of the Jasper Pool, also called Xiwangmu or Wangmu Niangniang, is lovingly called Mu Niang by her devotees. She is the foremost of female immortals, nurturing heaven and earth and presiding over the goddesses of every realm.")}</div>
+    <p style="margin-top:14px"><a href="deity.html">{L("閱讀更多 》》", "Read more 》》")}</a></p>
+  </div>
+</div></section>
+
+<section class="gutter" style="background:var(--paper-2)"><div class="container">
+  {sec("本堂設施", "Facilities")}
+  {floorplan_html("halls.html")}
 </div></section>
 
 <section class="gutter"><div class="container grid g2" style="align-items:start">
@@ -110,17 +143,17 @@ index_body = f'''
   <div class="card" style="gap:14px">
     {sec("點燈祈福", "Lamp Lighting")}
     <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
-      {"".join(f'<div style="display:flex;gap:8px;align-items:center">{lamp_icon(c)}<b>{L(z,e)}</b></div>' for z,e,c in [("個人光明燈","Guangming",LAMPS4[1][4]),("太歲燈","Tai Sui",LAMPS4[0][4]),("五路財神燈","Five Wealth Gods",LAMPS4[3][4]),("文昌燈","Wenchang",LAMPS4[2][4])])}
+      {"".join(f'<div style="display:flex;gap:8px;align-items:center">{lamp_icon(c)}<b>{L(z,e)}</b></div>' for z,e,c in [("個人光明燈","Personal Guangming",LAMPS4[1][4]),("太歲平安燈","Tai Sui Peace",LAMPS4[0][4]),("五路財神燈","Five Wealth Gods",LAMPS4[3][4]),("功名文昌燈","Wenchang Success",LAMPS4[2][4])])}
     </div>
-    {B("每盞 $120。凡安奉太歲、點光明燈、文昌光明燈的信眾，本堂於每月農曆初一、十五誦經上疏。", "$120 per lamp. On the 1st and 15th of every lunar month the temple chants scriptures and presents prayers for all lamp holders.", "p", "muted")}
+    {B("每盞 $120。凡點太歲燈、光明燈、文昌燈、財神燈的信眾，本堂於每月農曆初一、十五誦經上疏。", "$120 per lamp. On the 1st and 15th of every lunar month the temple chants scriptures and presents prayers for all lamp holders.", "p", "muted")}
     <div style="display:flex;flex-wrap:wrap;gap:10px">
-      <a class="cta" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Register")}</a>
+      <a class="cta" href="https://nytht.vercel.app/">{L("點燈報名", "Register")}</a>
       <a class="cta ghost" href="lamps.html">{L("點燈祈福", "Lamp lighting")}</a>
     </div>
   </div>
 </div></section>
 
-<hr class="divider">
+{BAND}
 
 <section class="gutter"><div class="container grid g2" style="align-items:center">
   {ph("master.jpg", "堂主簡介", "Head of the Temple")}
@@ -131,20 +164,14 @@ index_body = f'''
   </div>
 </div></section>
 
-<section class="gutter" style="background:var(--paper-2)"><div class="container">
-  {sec("本堂設施", "Facilities")}
-  <div class="grid g3">
-    {"".join(f'<a class="card" href="halls.html#{k}" style="text-decoration:none;color:inherit"><h3>{L(zh,en)}</h3>{B(dz,de,"p","muted")}<span class="more" style="color:var(--red)">{L("閱讀更多","More")}</span></a>' for k,(zh,en,img,dz,de) in zip(HALL_KEYS, HALLS))}
-  </div>
-</div></section>
 
-{BAND}
 
 <section class="gutter"><div class="container grid g2">
   <div>
     {sec("聯繫本堂", "Contact Us")}
     <dl class="contact-list">
       <div><dt>{L("地址","Address")}</dt><dd data-address></dd></div>
+      <div><dt>{L("參拜時間","Hours")}</dt><dd>{L("每日上午 9 點至下午 4 點","Daily, 9:00 am – 4:00 pm")}</dd></div>
       <div><dt>{L("電話","Tel")}</dt><dd data-tel></dd></div>
       <div><dt>{L("傳真","Fax")}</dt><dd data-fax></dd></div>
       <div><dt>Email</dt><dd data-email></dd></div>
@@ -158,7 +185,7 @@ page("index.html", "首頁", "紐約花蓮慈惠堂 New York Hua Lian Tsu Hui Te
 
 # ================================================================ 主神簡介
 page("deity.html", "主神簡介", "紐約花蓮慈惠堂主神：無極瑤池大聖西王金母大天尊。", f'''
-{pagehead("本堂簡介","About","主神簡介","Principal Deity")}
+{pagehead("供奉神明","Deities","主神簡介","Principal Deity")}
 <section class="gutter"><div class="container grid g2" style="align-items:start">
   {ph("jinmu.jpg", "瑤池金母", "The Golden Mother", "tall")}
   <div class="reading prose">
@@ -183,8 +210,17 @@ page("history.html", "紐約花蓮慈惠堂由來", "紐約花蓮慈惠堂由來
   <div class="reading prose">{"".join(P(z,e) for z,e in HISTORY)}</div>
   <div style="display:grid;gap:20px">
     {ph("temple.jpg", "紐約花蓮慈惠堂", "The temple")}
-    <ol class="upcoming years" style="list-style:none">{"".join(f'<li><div class="when">{y}</div><div class="what">{L(z,e)}</div></li>' for y,z,e in TIMELINE)}</ol>
+    <p><a class="cta ghost" href="milestones.html">{L("大事記 》》","Milestones 》》")}</a></p>
   </div>
+</div></section>
+{BAND}
+''')
+
+# ================================================================ 大事記
+page("milestones.html", "大事記", "紐約花蓮慈惠堂大事記。", f'''
+{pagehead("本堂簡介","About","大事記","Milestones")}
+<section class="gutter"><div class="container reading">
+  <ol class="upcoming years" style="list-style:none">{"".join(f'<li><div class="when">{y}</div><div class="what">{L(z,e)}</div></li>' for y,z,e in TIMELINE)}</ol>
 </div></section>
 {BAND}
 ''')
@@ -215,7 +251,7 @@ page("news.html", "最新活動", "紐約花蓮慈惠堂最新活動。", f'''
 
 # ================================================================ 年度行事（第一版的三欄表格）
 page("calendar.html", "年度行事", "紐約花蓮慈惠堂年度行事。", f'''
-{pagehead("本堂訊息","Temple News","年度行事","Annual Calendar")}
+{pagehead("點燈法會","Lamps & Ceremonies","年度行事","Annual Calendar")}
 <section class="gutter"><div class="container">
   <div class="tablewrap"><table class="cal">
     <thead><tr><th>{L("農曆","Lunar date")}</th><th>{L("行事","Event")}</th><th>{L("國曆（下一次）","Next date")}</th></tr></thead>
@@ -228,7 +264,7 @@ page("calendar.html", "年度行事", "紐約花蓮慈惠堂年度行事。", f'
 
 # ================================================================ 點燈祈福
 page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太歲、光明燈、文昌光明燈、五路財神燈。", f'''
-{pagehead("本堂訊息","Temple News","點燈祈福","Lamp Lighting")}
+{pagehead("點燈法會","Lamps & Ceremonies","點燈祈福","Lamp Lighting")}
 <section class="gutter"><div class="container">
   {DRAFT}
   <div class="grid g2">
@@ -251,7 +287,7 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
       <li><div class="when">2</div><div class="what">{L("送出後畫面會出現繳費單，請截圖或列印。", "A payment slip appears when you submit. Save a screenshot or print it.")}</div></li>
       <li><div class="when">3</div><div class="what">{L("帶著繳費單到堂裡繳交現金，告知報名編號即可。", "Bring the slip to the temple and pay in cash.")}</div></li>
     </ol>
-    <p style="margin-top:18px"><a class="cta big" href="https://nytht.vercel.app/#lamp">{L("點燈報名", "Register for a lamp")}</a></p>
+    <p style="margin-top:18px"><a class="cta big" href="https://nytht.vercel.app/">{L("點燈報名", "Register for a lamp")}</a></p>
     <p class="muted" style="margin-top:10px;font-size:.9rem">{L("也可以來電登記：", "You may also register by phone: ")}<span data-tel class="nowrap"></span></p>
   </div>
 </div></section>
@@ -268,20 +304,20 @@ page("lamps.html", "點燈祈福", "紐約花蓮慈惠堂點燈祈福：安太�
 ''')
 
 # ================================================================ 本堂設施
-page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、月老神君、五路財神殿、太歲殿、三清殿。", f'''
-{pagehead("","","本堂設施","Facilities")}
+page("halls.html", "本堂設施", "紐約花蓮慈惠堂本堂設施：大殿、文昌帝君殿、五路財神殿、太歲殿、三清殿。", f'''
+{pagehead("供奉神明","Deities","本堂設施","Facilities")}
 <section class="gutter"><div class="container">
   {DRAFT}
   {"".join(f"""<article class="hall" id="{k}">{ph(img, zh, en)}
     <div><h2>{L(zh,en)}</h2>{B(dz,de,"p","prose")}
-      <ul class="deities">{"".join(f"<li>{L(a,b)}</li>" for a,b in HALL_DEITIES[k])}</ul></div></article>""" for k,(zh,en,img,dz,de) in zip(HALL_KEYS, HALLS))}
+      {deity_html(k)}</div></article>""" for k,(zh,en,img,dz,de) in zip(HALL_KEYS, HALLS))}
 </div></section>
 {BAND}
 ''')
 
 # ================================================================ 活動剪影（第一版的照片格線）
 page("gallery.html", "活動剪影", "紐約花蓮慈惠堂活動剪影。", f'''
-{pagehead("","","活動剪影","Gallery")}
+{pagehead("本堂訊息","Temple News","活動剪影","Gallery")}
 <section class="gutter"><div class="container grid g2" style="align-items:start">
   <div><ul class="postlist">
     {"".join(f'<li><a href="{FBV}{vid}/" target="_blank" rel="noopener"><b>{L(z,e)}</b></a><time>Facebook</time></li>' for z,e,vid in VIDEOS)}
@@ -296,7 +332,7 @@ page("gallery.html", "活動剪影", "紐約花蓮慈惠堂活動剪影。", f''
 
 # ================================================================ 近期文章
 page("articles.html", "近期文章", "紐約花蓮慈惠堂近期文章。", f'''
-{pagehead("","","近期文章","Recent Articles")}
+{pagehead("本堂訊息","Temple News","近期文章","Recent Articles")}
 <section class="gutter"><div class="container reading">
   <div class="draftnote">{L("文章內容待補：請提供舊網站這三篇文章的原文。","Article text to be added.")}</div>
   {postlist(ARTICLES)}
@@ -310,14 +346,15 @@ page("contact.html", "聯繫本堂", "紐約花蓮慈惠堂地址、電話與 Em
   <div>
     <dl class="contact-list">
       <div><dt>{L("地址","Address")}</dt><dd data-address></dd></div>
+      <div><dt>{L("參拜時間","Hours")}</dt><dd>{L("每日上午 9 點至下午 4 點","Daily, 9:00 am – 4:00 pm")}</dd></div>
       <div><dt>{L("電話","Tel")}</dt><dd data-tel></dd></div>
       <div><dt>{L("傳真","Fax")}</dt><dd data-fax></dd></div>
       <div><dt>Email</dt><dd data-email></dd></div>
       <div><dt>Facebook</dt><dd><a data-fb href="#" target="_blank" rel="noopener">{L("紐約花蓮慈惠堂","Our page")}</a></dd></div>
     </dl>
-    <p style="margin-top:22px"><a class="cta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=22-06+121st+St,+College+Point,+NY+11356">{L("Google 地圖","Google Maps")}</a></p>
+    <p style="margin-top:22px"><a class="cta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=22-02+121st+St,+College+Point,+NY+11356">{L("Google 地圖","Google Maps")}</a></p>
   </div>
-  <iframe class="mapframe" title="Map" loading="lazy" src="https://maps.google.com/maps?q=22-06%20121st%20St%2C%20College%20Point%2C%20NY%2011356&z=15&output=embed"></iframe>
+  <iframe class="mapframe" title="Map" loading="lazy" src="https://maps.google.com/maps?q=22-02%20121st%20St%2C%20College%20Point%2C%20NY%2011356&z=15&output=embed"></iframe>
 </div></section>
 {BAND}
 ''')

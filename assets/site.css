@@ -256,10 +256,11 @@ main section{padding-block:48px}
 .prose.wraptext{max-width:58rem}
 
 /* 太歲殿：值年太歲 */
-.taisui-now{margin-top:18px;padding:14px 18px;border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:8px;max-width:30rem}
+.taisui-now{clear:both;margin-top:18px;padding:14px 18px;border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:8px;max-width:30rem}
 .taisui-now[hidden]{display:none}
 .taisui-now .label{font-size:.88rem;color:var(--red);font-weight:700;letter-spacing:.05em}
 .taisui-now .name{font-family:"Noto Serif TC",serif;font-size:1.45rem;margin-top:2px}
+.taisui-now .name{white-space:nowrap}
 .taisui-now .name b{color:var(--red)}
 .taisui-now .range{font-size:.88rem;margin-top:2px}
 .taisui-all{margin-top:14px}

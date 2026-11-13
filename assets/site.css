@@ -379,6 +379,14 @@ main section.quick{padding-block:0}
 .fp-steps{list-style:none;padding-left:0;gap:6px}
 .fp-steps li{display:flex;align-items:flex-start;gap:10px}
 .fp-num.n-list{position:static;display:inline-block;flex:none;transform:none;margin-top:.15em}
+/* 一樓三殿降低高度 */
+.fp-1f .fp-hall{line-height:1.4}
+.fp-1f > .fp-hall.main, .fp-1f > .fp-split{min-height:5.75rem}
+.fp-hall.main{min-height:5.75rem;padding-block:8px}
+.fp-split{min-height:5.75rem;grid-template-rows:minmax(0,1fr) 2.4rem}
+.fp-split .fp-hall.side{padding-block:6px}
+.fp-num.n-seam{bottom:calc(2.4rem + 2px)}
+.fp-wrap.route .fp-hall.main, .fp-wrap.route .fp-split .fp-hall.side{padding-bottom:1.8rem}
 @media (max-width:520px){ .fp-num{line-height:calc(1.3rem - 3px)} }
 .fp-doors{display:none;grid-template-columns:3rem minmax(0,1fr) minmax(0,1.9fr) minmax(0,1fr);gap:8px;margin-top:2px}
 .fp-wrap.route .fp-doors{display:grid}
